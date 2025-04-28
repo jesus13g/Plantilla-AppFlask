@@ -3,6 +3,7 @@ from flask_login import LoginManager, login_user, login_required, current_user
 from .auth.authController import AuthController
 from .models.tables import User
 from .models.db_connection import Database
+import os
 
 def create_app():
     app = Flask(__name__)
