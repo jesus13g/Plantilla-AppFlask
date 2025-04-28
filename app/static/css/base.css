@@ -1,0 +1,112 @@
+/* Estilos base para los toasts */
+.toast {
+    display: inline-block;
+    width: auto;
+    max-width: 90vw;  /* Evita que se salga en pantallas pequeñas */
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    word-wrap: break-word;
+}
+
+/* Contenedor de los toasts */
+#toast-container {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Tipos de mensaje */
+.toast.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #28a745;
+}
+
+.toast.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 5px solid #dc3545;
+}
+
+.toast.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left: 5px solid #ffc107;
+}
+
+.toast.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-left: 5px solid #17a2b8;
+}
+
+
+/* ======== FONDOS GENERALES ======== */
+body.bg-lightmode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.bg-darkmode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+body.bg-custom {
+    background: linear-gradient(to bottom right, #74ebd5, #acb6e5);
+    color: #ffffff;
+}
+
+/* ======== CABECERA ======== */
+header.bg-lightmode {
+    background-color: #007bff;
+}
+
+header.bg-darkmode {
+    background-color: #1f1f1f;
+}
+
+header.bg-custom {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.navbar a {
+    color: #fff !important;
+}
+
+
+/* Inputs elegantes estilo minimalista */
+.custom-input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    padding: 10px 0;
+    background-color: #f9f9f9;       /* gris muy tenue */
+    color: #212529;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+/* Al enfocar: cambia borde y mantiene fondo gris tenue */
+.custom-input:focus {
+    border-color: #4400ff;
+    background-color: #f1f1f1;       /* un gris un poco más marcado */
+    box-shadow: none;
+    outline: none;
+}
+
+/* Placeholder sutil */
+.custom-input::placeholder {
+    color: #777777;
+    opacity: 0.8;
+}
+
+
+
