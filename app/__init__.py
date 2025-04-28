@@ -6,8 +6,11 @@ from .models.db_connection import Database
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'supersecretkey'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'supersecretkey')
+    
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Inicialización de la base de datos y LoginManager
     db_instance = Database()
